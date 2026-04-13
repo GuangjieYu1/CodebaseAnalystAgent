@@ -1,0 +1,62 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "source_directory_index_json": "outputs/directory_index.json",
+  "generated_at": "2026-04-13T14:41:40",
+  "tool_class_count": 1,
+  "method_count": 3,
+  "tool_classes": [
+    {
+      "class_name": "OrderUtils",
+      "package_name": "com.example.ordersystem.util",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "method_count": 3,
+      "methods": [
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "generateOrderNo",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "prefix"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `generateOrderNo` 接收参数 `String prefix`，返回 `String`。"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "calculateTotalAmount",
+          "parameters": [
+            {
+              "type": "List<BigDecimal>",
+              "name": "items"
+            }
+          ],
+          "return_type": "BigDecimal",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `calculateTotalAmount` 接收参数 `List<BigDecimal> items`，返回 `BigDecimal`。"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "isValidOrderStatus",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "status"
+            }
+          ],
+          "return_type": "boolean",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `isValidOrderStatus` 接收参数 `String status`，返回 `boolean`。"
+        }
+      ]
+    }
+  ]
+}

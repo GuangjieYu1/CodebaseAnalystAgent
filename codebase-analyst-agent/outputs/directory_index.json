@@ -1,0 +1,250 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "source_tree_json": "outputs/project_tree.json",
+  "generated_at": "2026-04-13T14:41:40",
+  "directory_count": 22,
+  "directories": [
+    {
+      "path": "src",
+      "name": "src",
+      "depth": 0,
+      "parent_path": "",
+      "child_dir_count": 2,
+      "child_file_count": 1,
+      "matched_category": "unknown",
+      "match_reason": "未命中已知目录分类规则",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main",
+      "name": "main",
+      "depth": 1,
+      "parent_path": "src",
+      "child_dir_count": 2,
+      "child_file_count": 0,
+      "matched_category": "unknown",
+      "match_reason": "未命中已知目录分类规则",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java",
+      "name": "java",
+      "depth": 2,
+      "parent_path": "src/main",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_source_root",
+      "match_reason": "目录为 src/main/java",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com",
+      "name": "com",
+      "depth": 3,
+      "parent_path": "src/main/java",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_source_root",
+      "match_reason": "路径位于 src/main/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com/example",
+      "name": "example",
+      "depth": 4,
+      "parent_path": "src/main/java/com",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_source_root",
+      "match_reason": "路径位于 src/main/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem",
+      "name": "ordersystem",
+      "depth": 5,
+      "parent_path": "src/main/java/com/example",
+      "child_dir_count": 8,
+      "child_file_count": 1,
+      "matched_category": "java_source_root",
+      "match_reason": "路径位于 src/main/java 下",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/config",
+      "name": "config",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "config",
+      "match_reason": "目录名为 config",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/controller",
+      "name": "controller",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "controller",
+      "match_reason": "目录名为 controller",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/domain",
+      "name": "domain",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "domain",
+      "match_reason": "目录名为 domain",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/dto",
+      "name": "dto",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "dto",
+      "match_reason": "目录名为 dto",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/repository",
+      "name": "repository",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "repository",
+      "match_reason": "目录名为 repository",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/service",
+      "name": "service",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 1,
+      "child_file_count": 1,
+      "matched_category": "service",
+      "match_reason": "目录名为 service",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/service/impl",
+      "name": "impl",
+      "depth": 7,
+      "parent_path": "src/main/java/com/example/ordersystem/service",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "service",
+      "match_reason": "路径中包含 service",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/util",
+      "name": "util",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "util",
+      "match_reason": "目录名为 util",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/vo",
+      "name": "vo",
+      "depth": 6,
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "vo",
+      "match_reason": "目录名为 vo",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/resources",
+      "name": "resources",
+      "depth": 2,
+      "parent_path": "src/main",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "resources",
+      "match_reason": "路径位于 resources 目录下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test",
+      "name": "test",
+      "depth": 1,
+      "parent_path": "src",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "test",
+      "match_reason": "目录名为 test",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java",
+      "name": "java",
+      "depth": 2,
+      "parent_path": "src/test",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_test_root",
+      "match_reason": "路径位于 src/test/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com",
+      "name": "com",
+      "depth": 3,
+      "parent_path": "src/test/java",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_test_root",
+      "match_reason": "路径位于 src/test/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example",
+      "name": "example",
+      "depth": 4,
+      "parent_path": "src/test/java/com",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_test_root",
+      "match_reason": "路径位于 src/test/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example/ordersystem",
+      "name": "ordersystem",
+      "depth": 5,
+      "parent_path": "src/test/java/com/example",
+      "child_dir_count": 1,
+      "child_file_count": 0,
+      "matched_category": "java_test_root",
+      "match_reason": "路径位于 src/test/java 下",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example/ordersystem/service",
+      "name": "service",
+      "depth": 6,
+      "parent_path": "src/test/java/com/example/ordersystem",
+      "child_dir_count": 0,
+      "child_file_count": 1,
+      "matched_category": "service",
+      "match_reason": "测试源码目录下的 service 语境",
+      "contains_java_files": true
+    }
+  ]
+}

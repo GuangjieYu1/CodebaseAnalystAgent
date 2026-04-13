@@ -1,0 +1,80 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "source_tool_registry_json": "outputs/tool_registry.json",
+  "generated_at": "2026-04-13T16:54:54",
+  "provider": "deepseek",
+  "model": "deepseek-reasoner",
+  "enhanced_tool_class_count": 1,
+  "enhanced_method_count": 3,
+  "tool_classes": [
+    {
+      "class_name": "OrderUtils",
+      "package_name": "com.example.ordersystem.util",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "method_count": 3,
+      "methods": [
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "generateOrderNo",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "prefix"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `generateOrderNo` 接收参数 `String prefix`，返回 `String`。",
+          "method_summary": "基于前缀和当前时间戳生成订单号。",
+          "usage_suggestion": "适用于创建新订单时需要生成唯一标识符的场景。",
+          "reuse_advice": "reuse_directly"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "calculateTotalAmount",
+          "parameters": [
+            {
+              "type": "List<BigDecimal>",
+              "name": "items"
+            }
+          ],
+          "return_type": "BigDecimal",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `calculateTotalAmount` 接收参数 `List<BigDecimal> items`，返回 `BigDecimal`。",
+          "method_summary": "计算BigDecimal列表中所有值的总和。",
+          "usage_suggestion": "适合计算订单项的总金额或任何BigDecimal列表的求和操作。",
+          "reuse_advice": "reuse_directly"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "isValidOrderStatus",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "status"
+            }
+          ],
+          "return_type": "boolean",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `isValidOrderStatus` 接收参数 `String status`，返回 `boolean`。",
+          "method_summary": "验证给定字符串是否为预定义的有效订单状态（CREATED、PAID、CANCELLED）。",
+          "usage_suggestion": "用于订单处理流程中检查状态字符串的有效性。",
+          "reuse_advice": "extend_cautiously"
+        }
+      ],
+      "class_role": "utility_class",
+      "class_summary": "提供订单处理相关的静态实用方法，包括生成订单号、计算总金额和验证订单状态。",
+      "primary_use_cases": [
+        "订单号生成",
+        "金额计算",
+        "状态验证"
+      ]
+    }
+  ]
+}

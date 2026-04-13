@@ -1,0 +1,424 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "source_directory_index_json": "outputs/directory_index.json",
+  "generated_at": "2026-04-13T14:41:40",
+  "semantic_count": 22,
+  "semantics": [
+    {
+      "path": "src",
+      "category": "unknown",
+      "semantic_type": "unknown",
+      "description": "当前目录尚未命中明确的语义规则，后续可结合项目上下文进一步细化。",
+      "recommended_contents": [],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "未命中已知目录分类规则",
+      "parent_path": "",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main",
+      "category": "unknown",
+      "semantic_type": "unknown",
+      "description": "当前目录尚未命中明确的语义规则，后续可结合项目上下文进一步细化。",
+      "recommended_contents": [],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "未命中已知目录分类规则",
+      "parent_path": "src",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java",
+      "category": "java_source_root",
+      "semantic_type": "java_source_root",
+      "description": "该目录是 Java 主源码根路径，用于组织生产代码包结构。",
+      "recommended_contents": [
+        "主源码包路径",
+        "业务代码目录"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "controller",
+        "service",
+        "repository",
+        "domain",
+        "dto",
+        "vo",
+        "config",
+        "util"
+      ],
+      "reason": "目录为 src/main/java",
+      "parent_path": "src/main",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com",
+      "category": "java_source_root",
+      "semantic_type": "java_source_root",
+      "description": "该目录是 Java 主源码根路径，用于组织生产代码包结构。",
+      "recommended_contents": [
+        "主源码包路径",
+        "业务代码目录"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "controller",
+        "service",
+        "repository",
+        "domain",
+        "dto",
+        "vo",
+        "config",
+        "util"
+      ],
+      "reason": "路径位于 src/main/java 下",
+      "parent_path": "src/main/java",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com/example",
+      "category": "java_source_root",
+      "semantic_type": "java_source_root",
+      "description": "该目录是 Java 主源码根路径，用于组织生产代码包结构。",
+      "recommended_contents": [
+        "主源码包路径",
+        "业务代码目录"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "controller",
+        "service",
+        "repository",
+        "domain",
+        "dto",
+        "vo",
+        "config",
+        "util"
+      ],
+      "reason": "路径位于 src/main/java 下",
+      "parent_path": "src/main/java/com",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem",
+      "category": "java_source_root",
+      "semantic_type": "java_source_root",
+      "description": "该目录是 Java 主源码根路径，用于组织生产代码包结构。",
+      "recommended_contents": [
+        "主源码包路径",
+        "业务代码目录"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "controller",
+        "service",
+        "repository",
+        "domain",
+        "dto",
+        "vo",
+        "config",
+        "util"
+      ],
+      "reason": "路径位于 src/main/java 下",
+      "parent_path": "src/main/java/com/example",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/config",
+      "category": "config",
+      "semantic_type": "config_layer",
+      "description": "该目录通常负责项目配置相关内容，例如 Bean 配置、序列化配置或基础框架配置。",
+      "recommended_contents": [
+        "配置类",
+        "Bean 定义",
+        "框架初始化配置"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "目录名为 config",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/controller",
+      "category": "controller",
+      "semantic_type": "controller_layer",
+      "description": "该目录通常作为接口入口层，负责接收请求、参数转换，并调用 service 层完成业务处理。",
+      "recommended_contents": [
+        "Controller 类",
+        "接口路由定义",
+        "简单参数校验"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "service",
+        "dto",
+        "vo"
+      ],
+      "reason": "目录名为 controller",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/domain",
+      "category": "domain",
+      "semantic_type": "domain_model_layer",
+      "description": "该目录通常存放核心领域模型，表达业务中的主要对象和状态。",
+      "recommended_contents": [
+        "领域模型",
+        "核心实体对象",
+        "业务状态对象"
+      ],
+      "upstream_dependencies": [
+        "service",
+        "repository"
+      ],
+      "downstream_dependencies": [],
+      "reason": "目录名为 domain",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/dto",
+      "category": "dto",
+      "semantic_type": "dto_layer",
+      "description": "该目录通常存放数据传输对象，用于接口入参或跨层传递数据。",
+      "recommended_contents": [
+        "请求 DTO",
+        "传输对象",
+        "输入参数模型"
+      ],
+      "upstream_dependencies": [
+        "controller",
+        "service"
+      ],
+      "downstream_dependencies": [],
+      "reason": "目录名为 dto",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/repository",
+      "category": "repository",
+      "semantic_type": "repository_layer",
+      "description": "该目录通常负责数据访问逻辑，与数据库、缓存或外部存储交互。",
+      "recommended_contents": [
+        "Repository 类",
+        "DAO",
+        "数据查询与保存逻辑"
+      ],
+      "upstream_dependencies": [
+        "service"
+      ],
+      "downstream_dependencies": [
+        "domain",
+        "entity"
+      ],
+      "reason": "目录名为 repository",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/service",
+      "category": "service",
+      "semantic_type": "service_layer",
+      "description": "该目录通常承载业务逻辑实现，负责协调领域对象、工具类和数据访问层。",
+      "recommended_contents": [
+        "Service 接口",
+        "Service 实现类",
+        "业务流程编排"
+      ],
+      "upstream_dependencies": [
+        "controller"
+      ],
+      "downstream_dependencies": [
+        "repository",
+        "domain",
+        "util",
+        "dto",
+        "vo"
+      ],
+      "reason": "目录名为 service",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/service/impl",
+      "category": "service",
+      "semantic_type": "service_layer",
+      "description": "该目录通常承载业务逻辑实现，负责协调领域对象、工具类和数据访问层。",
+      "recommended_contents": [
+        "Service 接口",
+        "Service 实现类",
+        "业务流程编排"
+      ],
+      "upstream_dependencies": [
+        "controller"
+      ],
+      "downstream_dependencies": [
+        "repository",
+        "domain",
+        "util",
+        "dto",
+        "vo"
+      ],
+      "reason": "路径中包含 service",
+      "parent_path": "src/main/java/com/example/ordersystem/service",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/util",
+      "category": "util",
+      "semantic_type": "utility_layer",
+      "description": "该目录通常存放通用工具类，提供可复用的独立辅助能力。",
+      "recommended_contents": [
+        "工具类",
+        "静态辅助方法",
+        "格式化/校验/转换逻辑"
+      ],
+      "upstream_dependencies": [
+        "controller",
+        "service",
+        "repository"
+      ],
+      "downstream_dependencies": [],
+      "reason": "目录名为 util",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/java/com/example/ordersystem/vo",
+      "category": "vo",
+      "semantic_type": "vo_layer",
+      "description": "该目录通常存放视图对象或返回对象，用于接口输出和展示层封装。",
+      "recommended_contents": [
+        "返回 VO",
+        "展示对象",
+        "接口响应模型"
+      ],
+      "upstream_dependencies": [
+        "controller",
+        "service"
+      ],
+      "downstream_dependencies": [],
+      "reason": "目录名为 vo",
+      "parent_path": "src/main/java/com/example/ordersystem",
+      "contains_java_files": true
+    },
+    {
+      "path": "src/main/resources",
+      "category": "resources",
+      "semantic_type": "resource_layer",
+      "description": "该目录通常存放配置文件、模板文件或静态资源，是项目的资源与配置承载位置。",
+      "recommended_contents": [
+        "application.yml",
+        "配置文件",
+        "模板或静态资源"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "路径位于 resources 目录下",
+      "parent_path": "src/main",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test",
+      "category": "test",
+      "semantic_type": "unknown",
+      "description": "当前目录尚未命中明确的语义规则，后续可结合项目上下文进一步细化。",
+      "recommended_contents": [],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "目录名为 test",
+      "parent_path": "src",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java",
+      "category": "java_test_root",
+      "semantic_type": "java_test_root",
+      "description": "该目录是 Java 测试源码根路径，用于组织测试代码和测试上下文。",
+      "recommended_contents": [
+        "测试类",
+        "测试上下文",
+        "测试辅助代码"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "路径位于 src/test/java 下",
+      "parent_path": "src/test",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com",
+      "category": "java_test_root",
+      "semantic_type": "java_test_root",
+      "description": "该目录是 Java 测试源码根路径，用于组织测试代码和测试上下文。",
+      "recommended_contents": [
+        "测试类",
+        "测试上下文",
+        "测试辅助代码"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "路径位于 src/test/java 下",
+      "parent_path": "src/test/java",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example",
+      "category": "java_test_root",
+      "semantic_type": "java_test_root",
+      "description": "该目录是 Java 测试源码根路径，用于组织测试代码和测试上下文。",
+      "recommended_contents": [
+        "测试类",
+        "测试上下文",
+        "测试辅助代码"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "路径位于 src/test/java 下",
+      "parent_path": "src/test/java/com",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example/ordersystem",
+      "category": "java_test_root",
+      "semantic_type": "java_test_root",
+      "description": "该目录是 Java 测试源码根路径，用于组织测试代码和测试上下文。",
+      "recommended_contents": [
+        "测试类",
+        "测试上下文",
+        "测试辅助代码"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [],
+      "reason": "路径位于 src/test/java 下",
+      "parent_path": "src/test/java/com/example",
+      "contains_java_files": false
+    },
+    {
+      "path": "src/test/java/com/example/ordersystem/service",
+      "category": "service",
+      "semantic_type": "test_service_context",
+      "description": "该目录位于测试源码路径下，主要用于组织 service 相关测试类，而不是生产业务实现。",
+      "recommended_contents": [
+        "Service 测试类",
+        "业务测试上下文",
+        "Mock/Stub 测试辅助逻辑"
+      ],
+      "upstream_dependencies": [],
+      "downstream_dependencies": [
+        "repository",
+        "domain",
+        "dto",
+        "vo",
+        "util"
+      ],
+      "reason": "测试源码目录下的 service 语境",
+      "parent_path": "src/test/java/com/example/ordersystem",
+      "contains_java_files": true
+    }
+  ]
+}

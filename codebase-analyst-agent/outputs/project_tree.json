@@ -1,0 +1,303 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "generated_at": "2026-04-13T14:41:40",
+  "max_depth": 10,
+  "ignored_dirs": [
+    ".git",
+    ".idea",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".venv",
+    ".vscode",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "out",
+    "target",
+    "venv"
+  ],
+  "tree": [
+    {
+      "name": "src",
+      "path": "src",
+      "type": "directory",
+      "depth": 0,
+      "children": [
+        {
+          "name": "main",
+          "path": "src/main",
+          "type": "directory",
+          "depth": 1,
+          "children": [
+            {
+              "name": "java",
+              "path": "src/main/java",
+              "type": "directory",
+              "depth": 2,
+              "children": [
+                {
+                  "name": "com",
+                  "path": "src/main/java/com",
+                  "type": "directory",
+                  "depth": 3,
+                  "children": [
+                    {
+                      "name": "example",
+                      "path": "src/main/java/com/example",
+                      "type": "directory",
+                      "depth": 4,
+                      "children": [
+                        {
+                          "name": "ordersystem",
+                          "path": "src/main/java/com/example/ordersystem",
+                          "type": "directory",
+                          "depth": 5,
+                          "children": [
+                            {
+                              "name": "config",
+                              "path": "src/main/java/com/example/ordersystem/config",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "JacksonConfig.java",
+                                  "path": "src/main/java/com/example/ordersystem/config/JacksonConfig.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "controller",
+                              "path": "src/main/java/com/example/ordersystem/controller",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "OrderController.java",
+                                  "path": "src/main/java/com/example/ordersystem/controller/OrderController.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "domain",
+                              "path": "src/main/java/com/example/ordersystem/domain",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "Order.java",
+                                  "path": "src/main/java/com/example/ordersystem/domain/Order.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "dto",
+                              "path": "src/main/java/com/example/ordersystem/dto",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "CreateOrderRequest.java",
+                                  "path": "src/main/java/com/example/ordersystem/dto/CreateOrderRequest.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "repository",
+                              "path": "src/main/java/com/example/ordersystem/repository",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "OrderRepository.java",
+                                  "path": "src/main/java/com/example/ordersystem/repository/OrderRepository.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "service",
+                              "path": "src/main/java/com/example/ordersystem/service",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "impl",
+                                  "path": "src/main/java/com/example/ordersystem/service/impl",
+                                  "type": "directory",
+                                  "depth": 7,
+                                  "children": [
+                                    {
+                                      "name": "OrderServiceImpl.java",
+                                      "path": "src/main/java/com/example/ordersystem/service/impl/OrderServiceImpl.java",
+                                      "type": "file",
+                                      "depth": 8,
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "OrderService.java",
+                                  "path": "src/main/java/com/example/ordersystem/service/OrderService.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "util",
+                              "path": "src/main/java/com/example/ordersystem/util",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "OrderUtils.java",
+                                  "path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "vo",
+                              "path": "src/main/java/com/example/ordersystem/vo",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "OrderVO.java",
+                                  "path": "src/main/java/com/example/ordersystem/vo/OrderVO.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "OrderSystemApplication.java",
+                              "path": "src/main/java/com/example/ordersystem/OrderSystemApplication.java",
+                              "type": "file",
+                              "depth": 6,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "resources",
+              "path": "src/main/resources",
+              "type": "directory",
+              "depth": 2,
+              "children": [
+                {
+                  "name": "application.yml",
+                  "path": "src/main/resources/application.yml",
+                  "type": "file",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "test",
+          "path": "src/test",
+          "type": "directory",
+          "depth": 1,
+          "children": [
+            {
+              "name": "java",
+              "path": "src/test/java",
+              "type": "directory",
+              "depth": 2,
+              "children": [
+                {
+                  "name": "com",
+                  "path": "src/test/java/com",
+                  "type": "directory",
+                  "depth": 3,
+                  "children": [
+                    {
+                      "name": "example",
+                      "path": "src/test/java/com/example",
+                      "type": "directory",
+                      "depth": 4,
+                      "children": [
+                        {
+                          "name": "ordersystem",
+                          "path": "src/test/java/com/example/ordersystem",
+                          "type": "directory",
+                          "depth": 5,
+                          "children": [
+                            {
+                              "name": "service",
+                              "path": "src/test/java/com/example/ordersystem/service",
+                              "type": "directory",
+                              "depth": 6,
+                              "children": [
+                                {
+                                  "name": "OrderServiceTest.java",
+                                  "path": "src/test/java/com/example/ordersystem/service/OrderServiceTest.java",
+                                  "type": "file",
+                                  "depth": 7,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": ".DS_Store",
+          "path": "src/.DS_Store",
+          "type": "file",
+          "depth": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": ".DS_Store",
+      "path": ".DS_Store",
+      "type": "file",
+      "depth": 0,
+      "children": []
+    },
+    {
+      "name": "pom.xml",
+      "path": "pom.xml",
+      "type": "file",
+      "depth": 0,
+      "children": []
+    }
+  ]
+}

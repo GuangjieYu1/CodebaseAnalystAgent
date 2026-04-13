@@ -1,0 +1,41 @@
+请基于下面的 Java 工具类源码和结构化签名信息，对该工具类进行语义增强。
+
+【类基础信息】
+类名: {{class_name}}
+包名: {{package_name}}
+文件路径: {{file_path}}
+
+【结构化方法签名】
+{{methods_json}}
+
+【Java 源码全文】
+```java
+{{java_source}}
+```
+
+请输出严格 JSON，字段如下：
+{
+  "class_role": "",
+  "class_summary": "",
+  "primary_use_cases": [],
+  "methods": [
+    {
+      "method_name": "",
+      "method_summary": "",
+      "usage_suggestion": "",
+      "reuse_advice": ""
+    }
+  ]
+}
+
+字段要求：
+- class_role: 尽量简短，例如 utility_class
+- class_summary: 对类整体作用的简洁总结
+- primary_use_cases: 该类最主要的使用场景列表
+- methods: 必须与输入中的方法名一一对应
+- method_summary: 解释该方法做什么
+- usage_suggestion: 说明适合什么场景
+- reuse_advice: 只能取以下值之一：
+  - reuse_directly
+  - reuse_with_wrapper
+  - extend_cautiously
