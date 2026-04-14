@@ -11,31 +11,77 @@
 【Java 源码全文】
 ```java
 {{java_source}}
-```
-
 请输出严格 JSON，字段如下：
 {
-  "class_role": "",
-  "class_summary": "",
-  "primary_use_cases": [],
-  "methods": [
-    {
-      "method_name": "",
-      "method_summary": "",
-      "usage_suggestion": "",
-      "reuse_advice": ""
-    }
-  ]
+“class_role”: “”,
+“class_summary”: “”,
+“primary_use_cases”: [],
+“methods”: [
+{
+“method_name”: “”,
+“method_summary”: “”,
+“actual_output_semantics”: “”,
+“usage_suggestion”: “”,
+“reuse_advice”: “”
+}
+]
 }
 
 字段要求：
-- class_role: 尽量简短，例如 utility_class
-- class_summary: 对类整体作用的简洁总结
-- primary_use_cases: 该类最主要的使用场景列表
-- methods: 必须与输入中的方法名一一对应
-- method_summary: 解释该方法做什么
-- usage_suggestion: 说明适合什么场景
-- reuse_advice: 只能取以下值之一：
-  - reuse_directly
-  - reuse_with_wrapper
-  - extend_cautiously
+	•	class_role:
+	•	尽量简短，例如 utility_class
+	•	class_summary:
+	•	对类整体作用的简洁总结
+	•	primary_use_cases:
+	•	该类最主要的使用场景列表
+	•	不要写得过宽
+	•	methods:
+	•	必须与输入中的方法名一一对应
+
+对 methods 中每个字段的要求：
+	1.	method_name
+
+	•	必须与输入签名中的方法名完全一致
+
+	2.	method_summary
+
+	•	解释该方法“整体做什么”
+	•	必须以真实返回结果为中心来总结
+	•	不要只描述中间处理步骤
+	•	不要把“过程相似”写成“用途相同”
+
+	3.	actual_output_semantics
+
+	•	必须明确写出该方法最终返回的是什么
+	•	尽量具体
+	•	示例风格：
+	•	返回根据前缀和时间戳拼接得到的订单号字符串
+	•	返回金额列表求和后的 BigDecimal 总金额
+	•	返回输入列表中出现次数大于 1 的规范化元素列表
+	•	这是最重要字段之一，必须优先准确
+
+	4.	usage_suggestion
+
+	•	说明该方法适合什么场景
+	•	必须基于真实返回语义来写
+	•	不要用过宽、容易误导的表述
+	•	如果方法只适合“识别重复项”，不要写成“适合列表去重”
+
+	5.	reuse_advice
+
+	•	只能取以下值之一：
+	•	reuse_directly
+	•	reuse_with_wrapper
+	•	extend_cautiously
+	•	判定标准：
+	•	reuse_directly：
+只有当方法的输入、处理逻辑和最终返回语义都与常见目标高度一致时才可使用
+	•	reuse_with_wrapper：
+方法部分匹配，但需要额外封装、转换返回值、补前后处理
+	•	extend_cautiously：
+方法存在明显语义边界、混淆风险或未来扩展风险，不适合直接复用
+
+额外约束：
+	•	如果方法的最终返回结果与“常见直觉需求”不一致，必须在 method_summary 和 actual_output_semantics 中明确指出。
+	•	不要输出 JSON 之外的任何内容。
+  ---

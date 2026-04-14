@@ -2,7 +2,7 @@
 
 - Root: `/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system`
 - Source Tree JSON: `outputs/project_tree.json`
-- Generated At: `2026-04-13T14:41:40`
+- Generated At: `2026-04-14T15:02:25`
 - Directory Count: `22`
 
 ## Directories

@@ -1,17 +1,17 @@
 {
   "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
   "source_tool_registry_json": "outputs/tool_registry.json",
-  "generated_at": "2026-04-13T16:54:54",
-  "provider": "deepseek",
-  "model": "deepseek-reasoner",
+  "generated_at": "2026-04-14T16:43:39",
+  "provider": "ollama",
+  "model": "qwen3.5:9b",
   "enhanced_tool_class_count": 1,
-  "enhanced_method_count": 3,
+  "enhanced_method_count": 6,
   "tool_classes": [
     {
       "class_name": "OrderUtils",
       "package_name": "com.example.ordersystem.util",
       "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
-      "method_count": 3,
+      "method_count": 6,
       "methods": [
         {
           "class_name": "OrderUtils",
@@ -27,9 +27,87 @@
           "is_static": true,
           "visibility": "public",
           "summary": "方法 `generateOrderNo` 接收参数 `String prefix`，返回 `String`。",
-          "method_summary": "基于前缀和当前时间戳生成订单号。",
-          "usage_suggestion": "适用于创建新订单时需要生成唯一标识符的场景。",
+          "method_summary": "根据传入的前缀生成订单编号。",
+          "usage_suggestion": "适用于需要生成唯一且带时间信息的订单号场景。",
           "reuse_advice": "reuse_directly"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "randomMethod",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filePath"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `randomMethod` 接收参数 `String filePath`，返回 `String`。",
+          "method_summary": "处理文件路径字符串。",
+          "usage_suggestion": "适用于从文件路径中提取文件后缀的场景。",
+          "reuse_advice": "reuse_directly"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "buildNormalizedOrderSnapshot",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "rawCustomerName"
+            },
+            {
+              "type": "String",
+              "name": "rawOrderNo"
+            },
+            {
+              "type": "String",
+              "name": "rawStatus"
+            },
+            {
+              "type": "java.math.BigDecimal",
+              "name": "rawAmount"
+            },
+            {
+              "type": "java.math.BigDecimal",
+              "name": "discountAmount"
+            },
+            {
+              "type": "java.util.List<String>",
+              "name": "rawTags"
+            },
+            {
+              "type": "boolean",
+              "name": "strictMode"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `buildNormalizedOrderSnapshot` 接收参数 `String rawCustomerName,\n            String rawOrderNo,\n            String rawStatus,\n            java.math.BigDecimal rawAmount,\n            java.math.BigDecimal discountAmount,\n            java.util.List<String> rawTags,\n            boolean strictMode`，返回 `String`。",
+          "method_summary": "",
+          "usage_suggestion": "",
+          "reuse_advice": ""
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "normalizeAndExtractStillDuplicatedItems",
+          "parameters": [
+            {
+              "type": "List<String>",
+              "name": "rawItems"
+            }
+          ],
+          "return_type": "List<String>",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `normalizeAndExtractStillDuplicatedItems` 接收参数 `List<String> rawItems`，返回 `List<String>`。",
+          "method_summary": "对输入列表进行清洗、规范化并提取重复项。",
+          "usage_suggestion": "适用于需要识别并提取数据集中重复出现的规范化元素的场景，而非用于去重。",
+          "reuse_advice": "extend_cautiously"
         },
         {
           "class_name": "OrderUtils",
@@ -45,8 +123,8 @@
           "is_static": true,
           "visibility": "public",
           "summary": "方法 `calculateTotalAmount` 接收参数 `List<BigDecimal> items`，返回 `BigDecimal`。",
-          "method_summary": "计算BigDecimal列表中所有值的总和。",
-          "usage_suggestion": "适合计算订单项的总金额或任何BigDecimal列表的求和操作。",
+          "method_summary": "计算金额列表的总和。",
+          "usage_suggestion": "适用于快速计算一组金额项的总计。",
           "reuse_advice": "reuse_directly"
         },
         {
@@ -63,17 +141,19 @@
           "is_static": true,
           "visibility": "public",
           "summary": "方法 `isValidOrderStatus` 接收参数 `String status`，返回 `boolean`。",
-          "method_summary": "验证给定字符串是否为预定义的有效订单状态（CREATED、PAID、CANCELLED）。",
-          "usage_suggestion": "用于订单处理流程中检查状态字符串的有效性。",
-          "reuse_advice": "extend_cautiously"
+          "method_summary": "校验订单状态字符串是否合法。",
+          "usage_suggestion": "适用于验证订单状态字段是否符合系统定义的三种有效状态。",
+          "reuse_advice": "reuse_directly"
         }
       ],
       "class_role": "utility_class",
-      "class_summary": "提供订单处理相关的静态实用方法，包括生成订单号、计算总金额和验证订单状态。",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
       "primary_use_cases": [
-        "订单号生成",
-        "金额计算",
-        "状态验证"
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
       ]
     }
   ]

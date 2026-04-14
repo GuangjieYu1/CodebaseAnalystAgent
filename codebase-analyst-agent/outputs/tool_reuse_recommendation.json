@@ -1,0 +1,211 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "source_tool_registry_enhanced_json": "outputs/tool_registry_enhanced.json",
+  "generated_at": "2026-04-14T16:44:52",
+  "provider": "ollama",
+  "model": "qwen3.5:9b",
+  "query": "我想要一个输入一个列表，返回一个这个列表去重后的方法",
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "buildNormalizedOrderSnapshot",
+      "parameters": [
+        {
+          "type": "String",
+          "name": "rawCustomerName"
+        },
+        {
+          "type": "String",
+          "name": "rawOrderNo"
+        },
+        {
+          "type": "String",
+          "name": "rawStatus"
+        },
+        {
+          "type": "java.math.BigDecimal",
+          "name": "rawAmount"
+        },
+        {
+          "type": "java.math.BigDecimal",
+          "name": "discountAmount"
+        },
+        {
+          "type": "java.util.List<String>",
+          "name": "rawTags"
+        },
+        {
+          "type": "boolean",
+          "name": "strictMode"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "",
+      "usage_suggestion": "",
+      "reuse_advice": ""
+    },
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "calculateTotalAmount",
+      "parameters": [
+        {
+          "type": "List<BigDecimal>",
+          "name": "items"
+        }
+      ],
+      "return_type": "BigDecimal",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "计算金额列表的总和。",
+      "usage_suggestion": "适用于快速计算一组金额项的总计。",
+      "reuse_advice": "reuse_directly"
+    },
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "generateOrderNo",
+      "parameters": [
+        {
+          "type": "String",
+          "name": "prefix"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "根据传入的前缀生成订单编号。",
+      "usage_suggestion": "适用于需要生成唯一且带时间信息的订单号场景。",
+      "reuse_advice": "reuse_directly"
+    },
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "isValidOrderStatus",
+      "parameters": [
+        {
+          "type": "String",
+          "name": "status"
+        }
+      ],
+      "return_type": "boolean",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "校验订单状态字符串是否合法。",
+      "usage_suggestion": "适用于验证订单状态字段是否符合系统定义的三种有效状态。",
+      "reuse_advice": "reuse_directly"
+    },
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "normalizeAndExtractStillDuplicatedItems",
+      "parameters": [
+        {
+          "type": "List<String>",
+          "name": "rawItems"
+        }
+      ],
+      "return_type": "List<String>",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "对输入列表进行清洗、规范化并提取重复项。",
+      "usage_suggestion": "适用于需要识别并提取数据集中重复出现的规范化元素的场景，而非用于去重。",
+      "reuse_advice": "extend_cautiously"
+    },
+    {
+      "class_name": "OrderUtils",
+      "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+      "class_summary": "提供订单系统基础数据生成、状态校验、金额计算及订单快照构建等通用工具方法。",
+      "primary_use_cases": [
+        "生成带时间戳的订单编号",
+        "校验订单状态合法性",
+        "计算订单总金额",
+        "构建包含风险等级和分段的订单快照",
+        "提取列表中重复出现的规范化元素"
+      ],
+      "method_name": "randomMethod",
+      "parameters": [
+        {
+          "type": "String",
+          "name": "filePath"
+        }
+      ],
+      "return_type": "String",
+      "visibility": "public",
+      "is_static": true,
+      "method_summary": "处理文件路径字符串。",
+      "usage_suggestion": "适用于从文件路径中提取文件后缀的场景。",
+      "reuse_advice": "reuse_directly"
+    }
+  ],
+  "recommendation": {
+    "query": "我想要一个输入一个列表，返回一个这个列表去重后的方法",
+    "decision": "create_new_tool",
+    "final_recommendation": {
+      "recommended_class": "",
+      "recommended_method": "",
+      "reason": "用户需求是‘列表去重’，现有候选方法中：1. 'normalizeAndExtractStillDuplicatedItems' 明确用于‘提取重复项’，返回语义与去重相反；2. 其他方法（金额计算、状态校验、生成编号等）职责完全不匹配。因此没有合适方法可直接复用或简单包装。",
+      "usage_suggestion": "",
+      "reuse_advice": "create_new_tool"
+    },
+    "alternatives": [],
+    "ranking": [
+      {
+        "class_name": "OrderUtils",
+        "method_name": "normalizeAndExtractStillDuplicatedItems",
+        "rank": 1,
+        "reason": "虽然方法名包含‘重复’且处理列表，但其核心逻辑是‘提取重复项’而非‘去重’，返回语义与用户需求（去重）不一致，故仅作为最接近的候选排在首位，但不推荐直接复用。"
+      },
+      {
+        "class_name": "OrderUtils",
+        "method_name": "calculateTotalAmount",
+        "rank": 2,
+        "reason": "该方法处理 List 输入，但职责是金额求和，与去重需求无关，仅因参数类型相似而排在第二位。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+请根据下面的用户需求和候选工具方法，给出工具复用建议，并对候选方法进行排序。
+
+【用户需求】
+{{query}}
+
+【候选方法列表】
+{{candidate_methods_json}}
+
+请输出严格 JSON，字段如下：
+{
+  "query": "",
+  "decision": "",
+  "final_recommendation": {
+    "recommended_class": "",
+    "recommended_method": "",
+    "reason": "",
+    "usage_suggestion": "",
+    "reuse_advice": ""
+  },
+  "alternatives": [
+    {
+      "recommended_class": "",
+      "recommended_method": "",
+      "reason": "",
+      "usage_suggestion": "",
+      "reuse_advice": ""
+    }
+  ],
+  "ranking": [
+    {
+      "class_name": "",
+      "method_name": "",
+      "rank": 1,
+      "reason": ""
+    }
+  ]
+}
+
+字段要求：
+- query: 原始用户需求
+- decision: 只能取以下值之一
+  - 如果候选方法的真实返回语义与用户需求不一致，即使前置处理步骤相似，也不要直接判定为 reuse_existing 
+  - reuse_existing
+  - reuse_with_wrapper
+  - create_new_tool
+- final_recommendation:
+  - 如果 decision 是 reuse_existing 或 reuse_with_wrapper，必须填写 recommended_class 和 recommended_method
+  - 如果 decision 是 create_new_tool，各字段保留空字符串
+- alternatives:
+  - 最多返回 1 个备选方法
+  - 如果没有合适备选，则返回空数组
+- ranking:
+  - 按匹配度从高到低排序
+  - 最多返回前 2 个候选方法
+  - rank 从 1 开始
+- reason: 说明为什么这样排序或推荐
+- usage_suggestion: 说明建议如何使用该方法
+- reuse_advice:
+  - 如果候选方法的真实返回语义与用户需求不一致，即使前置处理步骤相似，也不要直接判定为 reuse_directly
+  - 如果命中候选方法，优先沿用候选方法自带的 reuse_advice
+  - 如果建议新建工具，则填 create_new_tool
+- 不要输出 JSON 之外的任何内容

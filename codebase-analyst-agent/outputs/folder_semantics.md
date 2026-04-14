@@ -2,7 +2,7 @@
 
 - Root: `/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system`
 - Source Directory Index JSON: `outputs/directory_index.json`
-- Generated At: `2026-04-13T14:41:40`
+- Generated At: `2026-04-14T15:02:25`
 - Semantic Count: `22`
 
 ## Folder Semantics

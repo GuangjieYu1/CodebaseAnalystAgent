@@ -1,15 +1,15 @@
 {
   "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
   "source_directory_index_json": "outputs/directory_index.json",
-  "generated_at": "2026-04-13T14:41:40",
+  "generated_at": "2026-04-14T15:02:25",
   "tool_class_count": 1,
-  "method_count": 3,
+  "method_count": 6,
   "tool_classes": [
     {
       "class_name": "OrderUtils",
       "package_name": "com.example.ordersystem.util",
       "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
-      "method_count": 3,
+      "method_count": 6,
       "methods": [
         {
           "class_name": "OrderUtils",
@@ -25,6 +25,75 @@
           "is_static": true,
           "visibility": "public",
           "summary": "方法 `generateOrderNo` 接收参数 `String prefix`，返回 `String`。"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "randomMethod",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "filePath"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `randomMethod` 接收参数 `String filePath`，返回 `String`。"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "buildNormalizedOrderSnapshot",
+          "parameters": [
+            {
+              "type": "String",
+              "name": "rawCustomerName"
+            },
+            {
+              "type": "String",
+              "name": "rawOrderNo"
+            },
+            {
+              "type": "String",
+              "name": "rawStatus"
+            },
+            {
+              "type": "java.math.BigDecimal",
+              "name": "rawAmount"
+            },
+            {
+              "type": "java.math.BigDecimal",
+              "name": "discountAmount"
+            },
+            {
+              "type": "java.util.List<String>",
+              "name": "rawTags"
+            },
+            {
+              "type": "boolean",
+              "name": "strictMode"
+            }
+          ],
+          "return_type": "String",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `buildNormalizedOrderSnapshot` 接收参数 `String rawCustomerName,\n            String rawOrderNo,\n            String rawStatus,\n            java.math.BigDecimal rawAmount,\n            java.math.BigDecimal discountAmount,\n            java.util.List<String> rawTags,\n            boolean strictMode`，返回 `String`。"
+        },
+        {
+          "class_name": "OrderUtils",
+          "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+          "method_name": "normalizeAndExtractStillDuplicatedItems",
+          "parameters": [
+            {
+              "type": "List<String>",
+              "name": "rawItems"
+            }
+          ],
+          "return_type": "List<String>",
+          "is_static": true,
+          "visibility": "public",
+          "summary": "方法 `normalizeAndExtractStillDuplicatedItems` 接收参数 `List<String> rawItems`，返回 `List<String>`。"
         },
         {
           "class_name": "OrderUtils",
