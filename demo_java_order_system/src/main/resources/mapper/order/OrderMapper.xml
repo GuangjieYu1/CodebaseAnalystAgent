@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ordersystem.infrastructure.order.persistence.mapper.OrderMapper">
+
+    <resultMap id="OrderResultMap" type="com.example.ordersystem.infrastructure.order.persistence.po.OrderPO">
+        <id property="id" column="id"/>
+        <result property="orderNo" column="order_no"/>
+        <result property="customerName" column="customer_name"/>
+        <result property="amount" column="amount"/>
+        <result property="status" column="status"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <sql id="OrderColumns">
+        id,
+        order_no,
+        customer_name,
+        amount,
+        status,
+        created_at,
+        updated_at
+    </sql>
+
+    <insert id="insert" parameterType="com.example.ordersystem.infrastructure.order.persistence.po.OrderPO"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO orders (
+            order_no,
+            customer_name,
+            amount,
+            status,
+            created_at,
+            updated_at
+        ) VALUES (
+            #{orderNo},
+            #{customerName},
+            #{amount},
+            #{status},
+            #{createdAt},
+            #{updatedAt}
+        )
+    </insert>
+
+    <select id="selectByOrderNo" resultMap="OrderResultMap">
+        SELECT <include refid="OrderColumns"/>
+        FROM orders
+        WHERE order_no = #{orderNo}
+    </select>
+
+    <select id="selectPage" resultMap="OrderResultMap">
+        SELECT <include refid="OrderColumns"/>
+        FROM orders
+        <where>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                AND customer_name LIKE CONCAT('%', #{customerName}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="countPage" resultType="long">
+        SELECT COUNT(1)
+        FROM orders
+        <where>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                AND customer_name LIKE CONCAT('%', #{customerName}, '%')
+            </if>
+        </where>
+    </select>
+
+    <update id="updateStatusByOrderNo">
+        UPDATE orders
+        SET status = #{status},
+            updated_at = #{updatedAt}
+        WHERE order_no = #{orderNo}
+    </update>
+</mapper>

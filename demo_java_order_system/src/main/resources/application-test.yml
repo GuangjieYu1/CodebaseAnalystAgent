@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo_order_system_test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: demo
+    password: demo123
+  flyway:
+    clean-disabled: false
+
+logging:
+  level:
+    root: INFO
+    com.example.ordersystem: DEBUG

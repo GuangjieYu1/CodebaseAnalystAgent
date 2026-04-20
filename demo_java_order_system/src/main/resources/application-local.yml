@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:demo_order_system}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${DB_USERNAME:demo}
+    password: ${DB_PASSWORD:demo123}
+
+management:
+  endpoint:
+    health:
+      show-details: always

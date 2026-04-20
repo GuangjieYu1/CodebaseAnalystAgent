@@ -1,0 +1,39 @@
+services:
+  mysql:
+    image: mysql:8.0.39
+    container_name: demo-java-order-system-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: demo_order_system
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo123
+      MYSQL_ROOT_PASSWORD: root123
+      TZ: Asia/Shanghai
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: demo_order_system
+      DB_USERNAME: demo
+      DB_PASSWORD: demo123
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

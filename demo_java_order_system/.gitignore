@@ -1,0 +1,9 @@
+target/
+.mvn/wrapper/apache-maven-*/
+.mvn/wrapper/*.zip
+.idea/
+*.iml
+.DS_Store
+logs/
+*.log
+dependency-reduced-pom.xml
