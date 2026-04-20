@@ -1,0 +1,1337 @@
+{
+  "project_root": "/Users/guangjieyu/VibeCodingProject/AgentDevelopment/CodebaseAnalystAgent/demo_java_order_system",
+  "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+  "package_name": "com.example.ordersystem.util",
+  "class_name": "OrderUtils",
+  "method_name": "normalizeAndExtractStillDuplicatedItems",
+  "method_signature": "public static List<String> normalizeAndExtractStillDuplicatedItems(List<String> rawItems)",
+  "tree_depth": 1,
+  "root_node": {
+    "file_path": "src/main/java/com/example/ordersystem/util/OrderUtils.java",
+    "class_name": "OrderUtils",
+    "package_name": "com.example.ordersystem.util",
+    "method_name": "normalizeAndExtractStillDuplicatedItems",
+    "method_signature": "public static List<String> normalizeAndExtractStillDuplicatedItems(List<String> rawItems)",
+    "source_line_hint": 158,
+    "call_type": "internal_method",
+    "children": [
+      {
+        "step_index": 1,
+        "call_text": "rawItems.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "rawItems",
+        "call_type": "library_value_method",
+        "source_line_hint": 159,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 2,
+        "call_text": "rawItem.trim().toLowerCase()",
+        "callee_method_name": "toLowerCase",
+        "callee_class_name": "rawItem.trim()",
+        "call_type": "library_value_method",
+        "source_line_hint": 169,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 3,
+        "call_text": "rawItem.trim()",
+        "callee_method_name": "trim",
+        "callee_class_name": "rawItem",
+        "call_type": "library_value_method",
+        "source_line_hint": 169,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 4,
+        "call_text": "candidate.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "candidate",
+        "call_type": "library_value_method",
+        "source_line_hint": 171,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 5,
+        "call_text": "candidate.startsWith(\"tmp-\")",
+        "callee_method_name": "startsWith",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 177,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 6,
+        "call_text": "candidate.substring(4)",
+        "callee_method_name": "substring",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 178,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 7,
+        "call_text": "candidate.startsWith(\"temp-\")",
+        "callee_method_name": "startsWith",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 179,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 8,
+        "call_text": "candidate.substring(5)",
+        "callee_method_name": "substring",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 180,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 9,
+        "call_text": "normalized.endsWith(\"_copy\")",
+        "callee_method_name": "endsWith",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 185,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 10,
+        "call_text": "normalized.substring(0, normalized.length() - 5)",
+        "callee_method_name": "substring",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 186,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 11,
+        "call_text": "normalized.length()",
+        "callee_method_name": "length",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 186,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 12,
+        "call_text": "normalized.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "normalized",
+        "call_type": "library_value_method",
+        "source_line_hint": 189,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 13,
+        "call_text": "sanitizedItems.add(normalized)",
+        "callee_method_name": "add",
+        "callee_class_name": "sanitizedItems",
+        "call_type": "library_value_method",
+        "source_line_hint": 190,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 14,
+        "call_text": "frequencyMap.put(item, frequencyMap.getOrDefault(item, 0) + 1)",
+        "callee_method_name": "put",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 196,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 15,
+        "call_text": "frequencyMap.getOrDefault(item, 0)",
+        "callee_method_name": "getOrDefault",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 196,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 16,
+        "call_text": "seenOnce.contains(item)",
+        "callee_method_name": "contains",
+        "callee_class_name": "seenOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 198,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 17,
+        "call_text": "seenOnce.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "seenOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 199,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 18,
+        "call_text": "seenMoreThanOnce.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "seenMoreThanOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 201,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 19,
+        "call_text": "uniqueProjection.removeIf(item -> frequencyMap.getOrDefault(item, 0) <= 0)",
+        "callee_method_name": "removeIf",
+        "callee_class_name": "uniqueProjection",
+        "call_type": "external_instance_method",
+        "source_line_hint": 207,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 20,
+        "call_text": "frequencyMap.getOrDefault(item, 0)",
+        "callee_method_name": "getOrDefault",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 207,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 21,
+        "call_text": "frequencyMap.get(item)",
+        "callee_method_name": "get",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 213,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 22,
+        "call_text": "finalResult.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "finalResult",
+        "call_type": "library_value_method",
+        "source_line_hint": 215,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 23,
+        "call_text": "finalResult.sort(Comparator.naturalOrder())",
+        "callee_method_name": "sort",
+        "callee_class_name": "finalResult",
+        "call_type": "external_instance_method",
+        "source_line_hint": 220,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      },
+      {
+        "step_index": 24,
+        "call_text": "Comparator.naturalOrder()",
+        "callee_method_name": "naturalOrder",
+        "callee_class_name": "Comparator",
+        "call_type": "external_static_method",
+        "source_line_hint": 220,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "children": [],
+        "truncated": true,
+        "cycle_detected": false
+      }
+    ],
+    "truncated": true,
+    "cycle_detected": false
+  },
+  "generated_at": "2026-04-20T11:16:16",
+  "tool_registry_enhanced_json_path": "outputs/tool_registry_enhanced.json",
+  "method_source": "public static List<String> normalizeAndExtractStillDuplicatedItems(List<String> rawItems) {\n        if (rawItems == null || rawItems.isEmpty()) {\n            return new ArrayList<>();\n        }\n\n        List<String> sanitizedItems = new ArrayList<>();\n        Map<String, Integer> frequencyMap = new LinkedHashMap<>();\n        Set<String> seenOnce = new LinkedHashSet<>();\n        Set<String> seenMoreThanOnce = new LinkedHashSet<>();\n\n        for (String rawItem : rawItems) {\n            String candidate = rawItem == null ? \"\" : rawItem.trim().toLowerCase();\n\n            if (candidate.isEmpty()) {\n                continue;\n            }\n\n            // 表面上像是在做“去重前预清洗”\n            String normalized;\n            if (candidate.startsWith(\"tmp-\")) {\n                normalized = candidate.substring(4);\n            } else if (candidate.startsWith(\"temp-\")) {\n                normalized = candidate.substring(5);\n            } else {\n                normalized = candidate;\n            }\n\n            if (normalized.endsWith(\"_copy\")) {\n                normalized = normalized.substring(0, normalized.length() - 5);\n            }\n\n            if (!normalized.isEmpty()) {\n                sanitizedItems.add(normalized);\n            }\n        }\n\n        // 表面上像是在准备构建“唯一值集合”\n        for (String item : sanitizedItems) {\n            frequencyMap.put(item, frequencyMap.getOrDefault(item, 0) + 1);\n\n            if (!seenOnce.contains(item)) {\n                seenOnce.add(item);\n            } else {\n                seenMoreThanOnce.add(item);\n            }\n        }\n\n        // 再来一轮“伪去重”动作，进一步增强迷惑性\n        List<String> uniqueProjection = new ArrayList<>(seenOnce);\n        uniqueProjection.removeIf(item -> frequencyMap.getOrDefault(item, 0) <= 0);\n\n        List<String> finalResult = new ArrayList<>();\n\n        // 真正逻辑：只返回那些曾经重复出现过的元素\n        for (String item : uniqueProjection) {\n            Integer count = frequencyMap.get(item);\n            if (count != null && count > 1) {\n                finalResult.add(item);\n            }\n        }\n\n        // 再补一层无害排序逻辑，增加“像去重结果”的错觉\n        finalResult.sort(Comparator.naturalOrder());\n\n        return finalResult;\n    }",
+  "call_steps": [
+    {
+      "step_index": 1,
+      "call_text": "rawItems.isEmpty()",
+      "callee_method_name": "isEmpty",
+      "callee_class_name": "rawItems",
+      "call_type": "library_value_method",
+      "source_line_hint": 159,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 2,
+      "call_text": "rawItem.trim().toLowerCase()",
+      "callee_method_name": "toLowerCase",
+      "callee_class_name": "rawItem.trim()",
+      "call_type": "library_value_method",
+      "source_line_hint": 169,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 3,
+      "call_text": "rawItem.trim()",
+      "callee_method_name": "trim",
+      "callee_class_name": "rawItem",
+      "call_type": "library_value_method",
+      "source_line_hint": 169,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 4,
+      "call_text": "candidate.isEmpty()",
+      "callee_method_name": "isEmpty",
+      "callee_class_name": "candidate",
+      "call_type": "library_value_method",
+      "source_line_hint": 171,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 5,
+      "call_text": "candidate.startsWith(\"tmp-\")",
+      "callee_method_name": "startsWith",
+      "callee_class_name": "candidate",
+      "call_type": "external_instance_method",
+      "source_line_hint": 177,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 6,
+      "call_text": "candidate.substring(4)",
+      "callee_method_name": "substring",
+      "callee_class_name": "candidate",
+      "call_type": "external_instance_method",
+      "source_line_hint": 178,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 7,
+      "call_text": "candidate.startsWith(\"temp-\")",
+      "callee_method_name": "startsWith",
+      "callee_class_name": "candidate",
+      "call_type": "external_instance_method",
+      "source_line_hint": 179,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 8,
+      "call_text": "candidate.substring(5)",
+      "callee_method_name": "substring",
+      "callee_class_name": "candidate",
+      "call_type": "external_instance_method",
+      "source_line_hint": 180,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 9,
+      "call_text": "normalized.endsWith(\"_copy\")",
+      "callee_method_name": "endsWith",
+      "callee_class_name": "normalized",
+      "call_type": "external_instance_method",
+      "source_line_hint": 185,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 10,
+      "call_text": "normalized.substring(0, normalized.length() - 5)",
+      "callee_method_name": "substring",
+      "callee_class_name": "normalized",
+      "call_type": "external_instance_method",
+      "source_line_hint": 186,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 11,
+      "call_text": "normalized.length()",
+      "callee_method_name": "length",
+      "callee_class_name": "normalized",
+      "call_type": "external_instance_method",
+      "source_line_hint": 186,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 12,
+      "call_text": "normalized.isEmpty()",
+      "callee_method_name": "isEmpty",
+      "callee_class_name": "normalized",
+      "call_type": "library_value_method",
+      "source_line_hint": 189,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 13,
+      "call_text": "sanitizedItems.add(normalized)",
+      "callee_method_name": "add",
+      "callee_class_name": "sanitizedItems",
+      "call_type": "library_value_method",
+      "source_line_hint": 190,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 14,
+      "call_text": "frequencyMap.put(item, frequencyMap.getOrDefault(item, 0) + 1)",
+      "callee_method_name": "put",
+      "callee_class_name": "frequencyMap",
+      "call_type": "external_instance_method",
+      "source_line_hint": 196,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 15,
+      "call_text": "frequencyMap.getOrDefault(item, 0)",
+      "callee_method_name": "getOrDefault",
+      "callee_class_name": "frequencyMap",
+      "call_type": "external_instance_method",
+      "source_line_hint": 196,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 16,
+      "call_text": "seenOnce.contains(item)",
+      "callee_method_name": "contains",
+      "callee_class_name": "seenOnce",
+      "call_type": "library_value_method",
+      "source_line_hint": 198,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 17,
+      "call_text": "seenOnce.add(item)",
+      "callee_method_name": "add",
+      "callee_class_name": "seenOnce",
+      "call_type": "library_value_method",
+      "source_line_hint": 199,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 18,
+      "call_text": "seenMoreThanOnce.add(item)",
+      "callee_method_name": "add",
+      "callee_class_name": "seenMoreThanOnce",
+      "call_type": "library_value_method",
+      "source_line_hint": 201,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 19,
+      "call_text": "uniqueProjection.removeIf(item -> frequencyMap.getOrDefault(item, 0) <= 0)",
+      "callee_method_name": "removeIf",
+      "callee_class_name": "uniqueProjection",
+      "call_type": "external_instance_method",
+      "source_line_hint": 207,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 20,
+      "call_text": "frequencyMap.getOrDefault(item, 0)",
+      "callee_method_name": "getOrDefault",
+      "callee_class_name": "frequencyMap",
+      "call_type": "external_instance_method",
+      "source_line_hint": 207,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 21,
+      "call_text": "frequencyMap.get(item)",
+      "callee_method_name": "get",
+      "callee_class_name": "frequencyMap",
+      "call_type": "external_instance_method",
+      "source_line_hint": 213,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 22,
+      "call_text": "finalResult.add(item)",
+      "callee_method_name": "add",
+      "callee_class_name": "finalResult",
+      "call_type": "library_value_method",
+      "source_line_hint": 215,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 23,
+      "call_text": "finalResult.sort(Comparator.naturalOrder())",
+      "callee_method_name": "sort",
+      "callee_class_name": "finalResult",
+      "call_type": "external_instance_method",
+      "source_line_hint": 220,
+      "tool_method_ref": null,
+      "interface_ref": null
+    },
+    {
+      "step_index": 24,
+      "call_text": "Comparator.naturalOrder()",
+      "callee_method_name": "naturalOrder",
+      "callee_class_name": "Comparator",
+      "call_type": "external_static_method",
+      "source_line_hint": 220,
+      "tool_method_ref": null,
+      "interface_ref": null
+    }
+  ],
+  "branches": [
+    {
+      "branch_index": 1,
+      "branch_type": "if",
+      "condition_text": "(rawItems == null || rawItems.isEmpty())",
+      "source_line_hint": 159
+    },
+    {
+      "branch_index": 2,
+      "branch_type": "return",
+      "condition_text": "return new ArrayList<>();",
+      "source_line_hint": 160
+    },
+    {
+      "branch_index": 3,
+      "branch_type": "if",
+      "condition_text": "(candidate.isEmpty())",
+      "source_line_hint": 171
+    },
+    {
+      "branch_index": 4,
+      "branch_type": "if",
+      "condition_text": "(candidate.startsWith(\"tmp-\"))",
+      "source_line_hint": 177
+    },
+    {
+      "branch_index": 5,
+      "branch_type": "if",
+      "condition_text": "(candidate.startsWith(\"temp-\"))",
+      "source_line_hint": 179
+    },
+    {
+      "branch_index": 6,
+      "branch_type": "if",
+      "condition_text": "(normalized.endsWith(\"_copy\"))",
+      "source_line_hint": 185
+    },
+    {
+      "branch_index": 7,
+      "branch_type": "if",
+      "condition_text": "(!normalized.isEmpty())",
+      "source_line_hint": 189
+    },
+    {
+      "branch_index": 8,
+      "branch_type": "if",
+      "condition_text": "(!seenOnce.contains(item))",
+      "source_line_hint": 198
+    },
+    {
+      "branch_index": 9,
+      "branch_type": "if",
+      "condition_text": "(count != null && count > 1)",
+      "source_line_hint": 214
+    },
+    {
+      "branch_index": 10,
+      "branch_type": "return",
+      "condition_text": "return finalResult;",
+      "source_line_hint": 222
+    }
+  ],
+  "stats": {
+    "call_step_count": 24,
+    "branch_count": 10,
+    "internal_method_count": 0,
+    "tool_method_count": 0,
+    "library_value_method_count": 10,
+    "external_interface_call_count": 0,
+    "external_static_method_count": 1,
+    "external_instance_method_count": 13,
+    "unknown_call_count": 0
+  },
+  "tree_stats": {
+    "node_count": 25
+  },
+  "main_flow_view": {
+    "visible_call_steps": [
+      {
+        "step_index": 1,
+        "call_text": "rawItems.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "rawItems",
+        "call_type": "library_value_method",
+        "source_line_hint": 159,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 1
+      },
+      {
+        "step_index": 4,
+        "call_text": "candidate.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "candidate",
+        "call_type": "library_value_method",
+        "source_line_hint": 171,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 2
+      },
+      {
+        "step_index": 5,
+        "call_text": "candidate.startsWith(\"tmp-\")",
+        "callee_method_name": "startsWith",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 177,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 3
+      },
+      {
+        "step_index": 6,
+        "call_text": "candidate.substring(4)",
+        "callee_method_name": "substring",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 178,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 4
+      },
+      {
+        "step_index": 7,
+        "call_text": "candidate.startsWith(\"temp-\")",
+        "callee_method_name": "startsWith",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 179,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 5
+      },
+      {
+        "step_index": 8,
+        "call_text": "candidate.substring(5)",
+        "callee_method_name": "substring",
+        "callee_class_name": "candidate",
+        "call_type": "external_instance_method",
+        "source_line_hint": 180,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 6
+      },
+      {
+        "step_index": 9,
+        "call_text": "normalized.endsWith(\"_copy\")",
+        "callee_method_name": "endsWith",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 185,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 7
+      },
+      {
+        "step_index": 10,
+        "call_text": "normalized.substring(0, normalized.length() - 5)",
+        "callee_method_name": "substring",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 186,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 8
+      },
+      {
+        "step_index": 11,
+        "call_text": "normalized.length()",
+        "callee_method_name": "length",
+        "callee_class_name": "normalized",
+        "call_type": "external_instance_method",
+        "source_line_hint": 186,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 9
+      },
+      {
+        "step_index": 12,
+        "call_text": "normalized.isEmpty()",
+        "callee_method_name": "isEmpty",
+        "callee_class_name": "normalized",
+        "call_type": "library_value_method",
+        "source_line_hint": 189,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 10
+      },
+      {
+        "step_index": 14,
+        "call_text": "frequencyMap.put(item, frequencyMap.getOrDefault(item, 0) + 1)",
+        "callee_method_name": "put",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 196,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 11
+      },
+      {
+        "step_index": 15,
+        "call_text": "frequencyMap.getOrDefault(item, 0)",
+        "callee_method_name": "getOrDefault",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 196,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 12
+      },
+      {
+        "step_index": 16,
+        "call_text": "seenOnce.contains(item)",
+        "callee_method_name": "contains",
+        "callee_class_name": "seenOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 198,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 13
+      },
+      {
+        "step_index": 19,
+        "call_text": "uniqueProjection.removeIf(item -> frequencyMap.getOrDefault(item, 0) <= 0)",
+        "callee_method_name": "removeIf",
+        "callee_class_name": "uniqueProjection",
+        "call_type": "external_instance_method",
+        "source_line_hint": 207,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 14
+      },
+      {
+        "step_index": 20,
+        "call_text": "frequencyMap.getOrDefault(item, 0)",
+        "callee_method_name": "getOrDefault",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 207,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 15
+      },
+      {
+        "step_index": 21,
+        "call_text": "frequencyMap.get(item)",
+        "callee_method_name": "get",
+        "callee_class_name": "frequencyMap",
+        "call_type": "external_instance_method",
+        "source_line_hint": 213,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 16
+      },
+      {
+        "step_index": 23,
+        "call_text": "finalResult.sort(Comparator.naturalOrder())",
+        "callee_method_name": "sort",
+        "callee_class_name": "finalResult",
+        "call_type": "external_instance_method",
+        "source_line_hint": 220,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 17
+      },
+      {
+        "step_index": 24,
+        "call_text": "Comparator.naturalOrder()",
+        "callee_method_name": "naturalOrder",
+        "callee_class_name": "Comparator",
+        "call_type": "external_static_method",
+        "source_line_hint": 220,
+        "tool_method_ref": null,
+        "interface_ref": null,
+        "main_flow_index": 18
+      }
+    ],
+    "hidden_call_steps": [
+      {
+        "step_index": 2,
+        "call_text": "rawItem.trim().toLowerCase()",
+        "callee_method_name": "toLowerCase",
+        "callee_class_name": "rawItem.trim()",
+        "call_type": "library_value_method",
+        "source_line_hint": 169,
+        "tool_method_ref": null,
+        "interface_ref": null
+      },
+      {
+        "step_index": 3,
+        "call_text": "rawItem.trim()",
+        "callee_method_name": "trim",
+        "callee_class_name": "rawItem",
+        "call_type": "library_value_method",
+        "source_line_hint": 169,
+        "tool_method_ref": null,
+        "interface_ref": null
+      },
+      {
+        "step_index": 13,
+        "call_text": "sanitizedItems.add(normalized)",
+        "callee_method_name": "add",
+        "callee_class_name": "sanitizedItems",
+        "call_type": "library_value_method",
+        "source_line_hint": 190,
+        "tool_method_ref": null,
+        "interface_ref": null
+      },
+      {
+        "step_index": 17,
+        "call_text": "seenOnce.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "seenOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 199,
+        "tool_method_ref": null,
+        "interface_ref": null
+      },
+      {
+        "step_index": 18,
+        "call_text": "seenMoreThanOnce.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "seenMoreThanOnce",
+        "call_type": "library_value_method",
+        "source_line_hint": 201,
+        "tool_method_ref": null,
+        "interface_ref": null
+      },
+      {
+        "step_index": 22,
+        "call_text": "finalResult.add(item)",
+        "callee_method_name": "add",
+        "callee_class_name": "finalResult",
+        "call_type": "library_value_method",
+        "source_line_hint": 215,
+        "tool_method_ref": null,
+        "interface_ref": null
+      }
+    ],
+    "visible_call_step_count": 18,
+    "hidden_call_step_count": 6,
+    "branch_count": 10
+  },
+  "business_flow_view": {
+    "business_steps": [
+      {
+        "step_index": 1,
+        "title": "条件校验与分支判断",
+        "step_summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "step_input": "当前方法参数、已生成的中间变量，以及用于判断是否继续执行的条件状态。",
+        "step_output": "产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换。",
+        "call_steps": [
+          {
+            "step_index": 1,
+            "call_text": "rawItems.isEmpty()",
+            "callee_method_name": "isEmpty",
+            "callee_class_name": "rawItems",
+            "call_type": "library_value_method",
+            "source_line_hint": 159,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 1
+          }
+        ],
+        "call_step_count": 1,
+        "line_range": {
+          "start": 159,
+          "end": 159
+        },
+        "method_names": [
+          "isEmpty"
+        ],
+        "call_step_indices": [
+          1
+        ]
+      },
+      {
+        "step_index": 2,
+        "title": "条件校验与分支判断",
+        "step_summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "step_input": "当前方法参数、已生成的中间变量，以及用于判断是否继续执行的条件状态。",
+        "step_output": "产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换。",
+        "call_steps": [
+          {
+            "step_index": 4,
+            "call_text": "candidate.isEmpty()",
+            "callee_method_name": "isEmpty",
+            "callee_class_name": "candidate",
+            "call_type": "library_value_method",
+            "source_line_hint": 171,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 2
+          }
+        ],
+        "call_step_count": 1,
+        "line_range": {
+          "start": 171,
+          "end": 171
+        },
+        "method_names": [
+          "isEmpty"
+        ],
+        "call_step_indices": [
+          2
+        ]
+      },
+      {
+        "step_index": 3,
+        "title": "输入标准化处理",
+        "step_summary": "该步骤对原始输入做清洗和规范化处理，例如裁剪前后缀、统一格式，并过滤掉无效内容。",
+        "summary": "该步骤对原始输入做清洗和规范化处理，例如裁剪前后缀、统一格式，并过滤掉无效内容。",
+        "step_input": "原始输入集合或原始字符串，以及当前待清洗的候选值。",
+        "step_output": "得到可继续参与后续处理的规范化结果，异常或无效内容会被清理或跳过。",
+        "call_steps": [
+          {
+            "step_index": 5,
+            "call_text": "candidate.startsWith(\"tmp-\")",
+            "callee_method_name": "startsWith",
+            "callee_class_name": "candidate",
+            "call_type": "external_instance_method",
+            "source_line_hint": 177,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 3
+          },
+          {
+            "step_index": 6,
+            "call_text": "candidate.substring(4)",
+            "callee_method_name": "substring",
+            "callee_class_name": "candidate",
+            "call_type": "external_instance_method",
+            "source_line_hint": 178,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 4
+          },
+          {
+            "step_index": 7,
+            "call_text": "candidate.startsWith(\"temp-\")",
+            "callee_method_name": "startsWith",
+            "callee_class_name": "candidate",
+            "call_type": "external_instance_method",
+            "source_line_hint": 179,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 5
+          },
+          {
+            "step_index": 8,
+            "call_text": "candidate.substring(5)",
+            "callee_method_name": "substring",
+            "callee_class_name": "candidate",
+            "call_type": "external_instance_method",
+            "source_line_hint": 180,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 6
+          }
+        ],
+        "call_step_count": 4,
+        "line_range": {
+          "start": 177,
+          "end": 180
+        },
+        "method_names": [
+          "startsWith",
+          "substring"
+        ],
+        "call_step_indices": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "step_index": 4,
+        "title": "输入标准化处理",
+        "step_summary": "该步骤对原始输入做清洗和规范化处理，例如裁剪前后缀、统一格式，并过滤掉无效内容。",
+        "summary": "该步骤对原始输入做清洗和规范化处理，例如裁剪前后缀、统一格式，并过滤掉无效内容。",
+        "step_input": "原始输入集合或原始字符串，以及当前待清洗的候选值。",
+        "step_output": "得到可继续参与后续处理的规范化结果，异常或无效内容会被清理或跳过。",
+        "call_steps": [
+          {
+            "step_index": 9,
+            "call_text": "normalized.endsWith(\"_copy\")",
+            "callee_method_name": "endsWith",
+            "callee_class_name": "normalized",
+            "call_type": "external_instance_method",
+            "source_line_hint": 185,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 7
+          },
+          {
+            "step_index": 10,
+            "call_text": "normalized.substring(0, normalized.length() - 5)",
+            "callee_method_name": "substring",
+            "callee_class_name": "normalized",
+            "call_type": "external_instance_method",
+            "source_line_hint": 186,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 8
+          },
+          {
+            "step_index": 11,
+            "call_text": "normalized.length()",
+            "callee_method_name": "length",
+            "callee_class_name": "normalized",
+            "call_type": "external_instance_method",
+            "source_line_hint": 186,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 9
+          }
+        ],
+        "call_step_count": 3,
+        "line_range": {
+          "start": 185,
+          "end": 186
+        },
+        "method_names": [
+          "endsWith",
+          "length",
+          "substring"
+        ],
+        "call_step_indices": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "step_index": 5,
+        "title": "条件校验与分支判断",
+        "step_summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "summary": "该步骤检查输入或当前候选值是否有效，并决定是提前返回、跳过当前项，还是继续进入后续处理。",
+        "step_input": "当前方法参数、已生成的中间变量，以及用于判断是否继续执行的条件状态。",
+        "step_output": "产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换。",
+        "call_steps": [
+          {
+            "step_index": 12,
+            "call_text": "normalized.isEmpty()",
+            "callee_method_name": "isEmpty",
+            "callee_class_name": "normalized",
+            "call_type": "library_value_method",
+            "source_line_hint": 189,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 10
+          }
+        ],
+        "call_step_count": 1,
+        "line_range": {
+          "start": 189,
+          "end": 189
+        },
+        "method_names": [
+          "isEmpty"
+        ],
+        "call_step_indices": [
+          10
+        ]
+      },
+      {
+        "step_index": 6,
+        "title": "频次统计",
+        "step_summary": "该步骤遍历规范化后的元素并更新 frequencyMap，记录每个候选值的出现次数。",
+        "summary": "该步骤遍历规范化后的元素并更新 frequencyMap，记录每个候选值的出现次数。",
+        "step_input": "已经完成规范化的元素序列，以及用于累计计数的 frequencyMap 中间状态。",
+        "step_output": "得到按元素聚合后的频次统计结果，可直接用于后续重复项筛选。",
+        "call_steps": [
+          {
+            "step_index": 14,
+            "call_text": "frequencyMap.put(item, frequencyMap.getOrDefault(item, 0) + 1)",
+            "callee_method_name": "put",
+            "callee_class_name": "frequencyMap",
+            "call_type": "external_instance_method",
+            "source_line_hint": 196,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 11
+          },
+          {
+            "step_index": 15,
+            "call_text": "frequencyMap.getOrDefault(item, 0)",
+            "callee_method_name": "getOrDefault",
+            "callee_class_name": "frequencyMap",
+            "call_type": "external_instance_method",
+            "source_line_hint": 196,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 12
+          },
+          {
+            "step_index": 16,
+            "call_text": "seenOnce.contains(item)",
+            "callee_method_name": "contains",
+            "callee_class_name": "seenOnce",
+            "call_type": "library_value_method",
+            "source_line_hint": 198,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 13
+          }
+        ],
+        "call_step_count": 3,
+        "line_range": {
+          "start": 196,
+          "end": 198
+        },
+        "method_names": [
+          "contains",
+          "getOrDefault",
+          "put"
+        ],
+        "call_step_indices": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "step_index": 7,
+        "title": "重复项筛选",
+        "step_summary": "该步骤根据频次统计结果筛选真正重复出现的元素，只保留满足条件的候选项。",
+        "summary": "该步骤根据频次统计结果筛选真正重复出现的元素，只保留满足条件的候选项。",
+        "step_input": "频次统计结果、候选元素列表，以及当前用于过滤重复项的判定条件。",
+        "step_output": "得到只包含真正重复元素的候选结果集合。",
+        "call_steps": [
+          {
+            "step_index": 19,
+            "call_text": "uniqueProjection.removeIf(item -> frequencyMap.getOrDefault(item, 0) <= 0)",
+            "callee_method_name": "removeIf",
+            "callee_class_name": "uniqueProjection",
+            "call_type": "external_instance_method",
+            "source_line_hint": 207,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 14
+          },
+          {
+            "step_index": 20,
+            "call_text": "frequencyMap.getOrDefault(item, 0)",
+            "callee_method_name": "getOrDefault",
+            "callee_class_name": "frequencyMap",
+            "call_type": "external_instance_method",
+            "source_line_hint": 207,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 15
+          }
+        ],
+        "call_step_count": 2,
+        "line_range": {
+          "start": 207,
+          "end": 207
+        },
+        "method_names": [
+          "getOrDefault",
+          "removeIf"
+        ],
+        "call_step_indices": [
+          14,
+          15
+        ]
+      },
+      {
+        "step_index": 8,
+        "title": "重复项筛选",
+        "step_summary": "该步骤根据频次统计结果筛选真正重复出现的元素，只保留满足条件的候选项。",
+        "summary": "该步骤根据频次统计结果筛选真正重复出现的元素，只保留满足条件的候选项。",
+        "step_input": "频次统计结果、候选元素列表，以及当前用于过滤重复项的判定条件。",
+        "step_output": "得到只包含真正重复元素的候选结果集合。",
+        "call_steps": [
+          {
+            "step_index": 21,
+            "call_text": "frequencyMap.get(item)",
+            "callee_method_name": "get",
+            "callee_class_name": "frequencyMap",
+            "call_type": "external_instance_method",
+            "source_line_hint": 213,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 16
+          }
+        ],
+        "call_step_count": 1,
+        "line_range": {
+          "start": 213,
+          "end": 213
+        },
+        "method_names": [
+          "get"
+        ],
+        "call_step_indices": [
+          16
+        ]
+      },
+      {
+        "step_index": 9,
+        "title": "结果排序与返回",
+        "step_summary": "该步骤对最终结果进行排序，并输出当前方法的最终返回值。",
+        "summary": "该步骤对最终结果进行排序，并输出当前方法的最终返回值。",
+        "step_input": "已经筛选完成的结果集合，以及排序规则或比较器。",
+        "step_output": "得到排序后的最终结果，并完成当前方法的返回。",
+        "call_steps": [
+          {
+            "step_index": 23,
+            "call_text": "finalResult.sort(Comparator.naturalOrder())",
+            "callee_method_name": "sort",
+            "callee_class_name": "finalResult",
+            "call_type": "external_instance_method",
+            "source_line_hint": 220,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 17
+          },
+          {
+            "step_index": 24,
+            "call_text": "Comparator.naturalOrder()",
+            "callee_method_name": "naturalOrder",
+            "callee_class_name": "Comparator",
+            "call_type": "external_static_method",
+            "source_line_hint": 220,
+            "tool_method_ref": null,
+            "interface_ref": null,
+            "main_flow_index": 18
+          }
+        ],
+        "call_step_count": 2,
+        "line_range": {
+          "start": 220,
+          "end": 220
+        },
+        "method_names": [
+          "naturalOrder",
+          "sort"
+        ],
+        "call_step_indices": [
+          17,
+          18
+        ]
+      }
+    ],
+    "business_step_count": 9,
+    "generation_mode": "heuristic",
+    "fallback_reason": "llm_disabled",
+    "final_summary": "方法 normalizeAndExtractStillDuplicatedItems 的主流程可以概括为：先处理“条件校验与分支判断”，产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换；接着处理“条件校验与分支判断”，产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换；接着处理“输入标准化处理”，得到可继续参与后续处理的规范化结果，异常或无效内容会被清理或跳过；接着处理“输入标准化处理”，得到可继续参与后续处理的规范化结果，异常或无效内容会被清理或跳过；接着处理“条件校验与分支判断”，产出是否继续后续流程的判断结论，必要时触发提前返回或分支切换；接着处理“频次统计”，得到按元素聚合后的频次统计结果，可直接用于后续重复项筛选；接着处理“重复项筛选”，得到只包含真正重复元素的候选结果集合；接着处理“重复项筛选”，得到只包含真正重复元素的候选结果集合；最后处理“结果排序与返回”，得到排序后的最终结果，并完成当前方法的返回。"
+  },
+  "llm_provider": "heuristic",
+  "llm_model": "",
+  "output_json": "outputs/verify_normalize_method_execution_graph.json",
+  "output_md": "outputs/verify_normalize_method_execution_path.md"
+}

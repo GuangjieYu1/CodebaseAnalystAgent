@@ -1,0 +1,108 @@
+请根据下面的目标方法源码和调用项列表，对该方法做“步骤级静态模拟”。
+
+【目标类】
+类名: {{class_name}}
+包名: {{package_name}}
+文件路径: {{file_path}}
+
+【目标方法名】
+{{method_name}}
+
+【目标方法签名】
+{{method_signature}}
+
+【目标方法源码】
+```java
+{{method_source}}
+```
+
+【程序构造的标准输入样例】
+{{standard_input_json}}
+
+【程序推断的返回路径摘要】
+{{return_paths_json}}
+
+【程序提取的明显分支】
+{{branches_json}}
+
+【初步提取的调用项列表】
+{{call_items_json}}
+
+【补充上下文：整类源码】
+{{java_source}}
+
+请输出严格 JSON，字段如下：
+{
+  "method_summary": "",
+  "steps": [
+    {
+      "step_index": 1,
+      "call_text": "",
+      "callee_method_name": "",
+      "callee_class_name": "",
+      "call_type": "",
+      "llm_summary": "",
+      "llm_simulated_input": "",
+      "llm_simulated_output": "",
+      "summary": "",
+      "expected_input": "",
+      "expected_output": "",
+      "preconditions": [],
+      "boundary_conditions": [],
+      "notes": ""
+    }
+  ],
+  "branches": [
+    {
+      "branch_index": 1,
+      "branch_type": "",
+      "condition_text": "",
+      "effect": ""
+    }
+  ]
+}
+
+字段要求：
+- `method_summary`
+  - 总结该方法整体做什么
+  - 说明主流程想得到什么结果，以及主要返回语义
+  - 不要只复述代码结构
+- `steps`
+  - 必须与输入的调用项列表一一对应
+  - 顺序必须与输入调用项顺序一致
+  - 不要新增步骤，也不要删除步骤
+- `call_type`
+  - 只能取以下值之一：
+    - `internal_method`
+    - `tool_method`
+    - `external_interface_call`
+    - `external_instance_method`
+    - `external_static_method`
+    - `unknown_call`
+- `llm_summary`
+  - 说明该步骤为什么存在
+  - 说明它对主流程推进了什么状态变化或业务判断
+  - 不要写成“调用 xxx 方法”“执行 startsWith 判断”这种字面代码描述
+- `llm_simulated_input`
+  - 必须结合标准输入样例、前置状态或中间变量做半具体模拟
+  - 如果步骤处理集合、Map、布尔标志，尽量给出进入步骤前的关键状态
+- `llm_simulated_output`
+  - 必须写执行后形成的关键状态变化
+  - 对集合、Map、布尔标志、返回值优先使用“执行前 -> 执行后”或“得到 xxx 状态”表达
+- `summary`
+  - 必须与 `llm_summary` 保持同义
+- `expected_input`
+  - 必须与 `llm_simulated_input` 保持同义
+- `expected_output`
+  - 必须与 `llm_simulated_output` 保持同义
+- `preconditions`
+  - 列出该步骤成立或执行前依赖的明显前置条件
+- `boundary_conditions`
+  - 列出该步骤相关的边界条件、空值情况、提前返回条件或失败条件
+- `branches`
+  - 只提明显存在的分支、判断、提前返回或异常路径
+  - 不能凭空增加不存在的分支
+
+额外要求：
+- 如果某一步信息不足，可以保守表达，但要尽量指出“当前候选值”“当前集合状态”“当前标志位状态”等可推断语义。
+- 不要输出 JSON 之外的任何内容。

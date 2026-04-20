@@ -1,0 +1,76 @@
+请根据下面的程序提取结果，对业务步骤和低层调用步骤做 LLM 语义增强。
+
+【目标类】
+类名: {{class_name}}
+包名: {{package_name}}
+文件路径: {{file_path}}
+
+【目标方法名】
+{{method_name}}
+
+【目标方法签名】
+{{method_signature}}
+
+【目标方法源码】
+```java
+{{method_source}}
+```
+
+【程序构造的标准输入样例】
+{{standard_input_json}}
+
+【程序推断的返回路径摘要】
+{{return_paths_json}}
+
+【程序提取的明显分支】
+{{branches_json}}
+
+【业务步骤（程序版）】
+{{business_steps_json}}
+
+【低层调用步骤（程序版）】
+{{visible_call_steps_json}}
+
+请输出严格 JSON，字段如下：
+{
+  "business_steps": [
+    {
+      "step_index": 1,
+      "llm_summary": "",
+      "llm_simulated_input": "",
+      "llm_simulated_output": ""
+    }
+  ],
+  "visible_call_steps": [
+    {
+      "main_flow_index": 1,
+      "llm_summary": "",
+      "llm_simulated_input": "",
+      "llm_simulated_output": ""
+    }
+  ]
+}
+
+字段要求：
+- `business_steps`
+  - 必须与输入业务步骤一一对应
+  - 只能使用输入里的 `step_index`
+  - 不要新增、删除、合并或拆分步骤
+- `visible_call_steps`
+  - 必须与输入低层调用步骤一一对应
+  - 只能使用输入里的 `main_flow_index`
+  - 不要新增、删除、合并或拆分步骤
+- `llm_summary`
+  - 必须说明该步骤的主流程作用或状态推进作用
+  - 不要写成“调用 xxx”“执行 contains 判断”“调用 substring”
+- `llm_simulated_input`
+  - 必须结合标准输入样例和前置状态做半具体模拟
+  - 尽量指出关键变量、集合、Map、布尔标志在进入该步骤前的状态
+- `llm_simulated_output`
+  - 必须说明执行后形成的关键状态变化
+  - 尽量指出集合内容变化、Map 计数变化、布尔标志变化、返回值候选变化
+
+额外要求：
+- 如果步骤信息不足，可以保守表达，但不要退化成空泛套话。
+- 如果程序已有 rough hints，只能把它们当作证据，不能直接照抄。
+- 不要输出 JSON 之外的任何内容。
